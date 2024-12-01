@@ -1,6 +1,4 @@
 
-
-
 // Function to show the selected section with a smooth transition
 function showSection(sectionId) {
     // Hide all sections
@@ -85,4 +83,9 @@ document.getElementById('siteName').addEventListener('click', function (e) {
     resetToMainPage(); // Trigger the reset function
 });
 
+// Example toggle script
+document.getElementById('mobileMenuButton').addEventListener('click', () => {
+    const navMenu = document.querySelector('nav ul');
+    navMenu.classList.toggle('active');
+});
 
