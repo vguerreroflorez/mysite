@@ -22,6 +22,10 @@ header {
     text-align: center;
     position: relative;
     transition: padding 0.5s ease;
+    display: flex;
+    flex-direction: column;  /* Stack header items vertically */
+    align-items: center;     /* Center the content horizontally */
+    justify-content: center; /* Center content vertically */
 }
 
 
@@ -52,6 +56,62 @@ a:hover {
     color: #ffbf47; /* Change to orange on hover */
     text-decoration: underline; /* Keeps the underline on hover */
 }
+
+/* Media Queries for Responsive Design */
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 200px 0; /* Adjust header padding for tablets */
+    }
+
+    header h1 {
+        font-size: 2.5rem; /* Slightly smaller font size on tablets */
+    }
+
+    /* For better readability, you can adjust paragraph font size or any additional content */
+    header p {
+        font-size: 1.2rem;
+    }
+}
+
+/* For mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 150px 0; /* Adjust header padding for mobile */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Even smaller font size for mobile */
+    }
+
+    header p {
+        font-size: 1rem; /* Smaller paragraph text */
+    }
+}
+
+/* Optional: Mobile Menu */
+@media (max-width: 480px) {
+    nav ul {
+        display: none; /* Hide navigation links by default */
+    }
+
+    /* Optionally, add a hamburger button for mobile navigation */
+    #mobileMenuButton {
+        display: block;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    /* Show navigation when hamburger menu is active */
+    nav ul.active {
+        display: block;
+    }
+}
+
 
 /* To justify references */
 .reference {
