@@ -1,0 +1,372 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ensure padding and margin don't affect layout */
+}
+
+/* Container for the content */
+.global-container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 15px; /* Add a bit of padding to prevent text from touching edges */
+}
+
+/* Header Styling */
+header {
+    background-image: linear-gradient(to bottom, #042c19, #103724);
+    color: #fff;
+    padding: 300px 0; /* Initial height for header */
+    text-align: center;
+    position: relative;
+    transition: padding 0.5s ease;
+}
+
+
+/*Adding Space Around Header Elements*/
+
+header h1 {
+    margin-bottom: 10px; /* Adds space below the title */
+    font-size: 3rem;
+}
+
+header p {
+    margin-top: 10px; /* Adds space above any paragraphs */
+}
+
+/* Reduced Header Style for the Transition */
+header.reduced {
+    padding: 20px 0; /* Reduced padding for header */
+    transition: padding 0.5s ease; /* Smooth transition for padding change */
+}
+
+/* For links style */
+a {
+    color: black; /* Makes the link color black */
+    text-decoration: underline; /* Adds underline */
+}
+/* Hover effect for links */
+a:hover {
+    color: #ffbf47; /* Change to orange on hover */
+    text-decoration: underline; /* Keeps the underline on hover */
+}
+
+/* To justify references */
+.reference {
+    text-align: justify;
+}
+
+/* Navigation Styling */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-size: 1.3rem;  /* Increase font size for navigation links */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffbf47;
+}
+
+/* Placeholder for the figure (image) */
+.figure-placeholder {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+#avatarImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 40%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    object-fit: cover;
+    margin-top: 10px; 
+    animation: zoomIn 0.8s ease-out; /* Apply zoom-in animation on load */
+}
+
+/* Keyframes for Zoom-In Animation */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5); /* Start smaller */
+        opacity: 0; /* Start transparent */
+    }
+    50% {
+        opacity: 1; /* Fade in */
+    }
+    100% {
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+
+/* Content Sections */
+.content-section {
+    display: none;
+    text-align: center; /* Ensures text is centered by default */
+    padding: 20px 20px;
+    background-color: #fff;
+    margin: 20px 10px;
+    max-height: 80vh; /* Restrict the height of the section */
+    overflow-y: auto; /* Scroll vertically if content exceeds */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
+/* Show the section when active */
+.content-section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Header */
+section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Footer (optional) */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+--------------------------------------------------------------------------------
+/* About Section Styles */
+#about.container {
+    max-width: 600px;
+    margin: 20px auto ;
+    text-align: justify;
+    padding: 30px;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better appearance */
+    box-sizing: border-box;
+    background-color: #fff; /* Ensure there's a distinct background */
+}
+
+/* Optional - Add consistent margin and padding to paragraphs */
+#about.container p {
+    margin: 10px 0; /* Space between paragraphs */
+    line-height: 1.6; /* Improve readability */
+}
+/* Ensure that the sections and the content in them have some breathing room */
+section {
+    padding: 0 15px;  /* Add padding to sections to ensure no content touches the edges */
+}
+
+/* Style for the Images within the Text */
+.about-image {
+    text-align: center;
+    margin: 20px 0; /* Adds space above and below the image */
+}
+
+.about-image img {
+    max-width: 80%; /* Adjusts the image size */
+    height: auto;
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
+}
+
+.about-image figcaption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px; /* Space between the image and caption */
+}
+------------------------------------------------------------------------
+#publications {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to prevent excessive height */
+    justify-content: center; /* Centers the items horizontally */
+    gap: 20px; /* Add spacing between items */
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 400vh;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+#publication.active {
+    display: block; /* Show when active */
+}
+   
+.publication {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100% ;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+/* Ensure each publication title and content are styled */
+.publication h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.publication a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.publication a:hover {
+    color: #ffbf47;
+}
+
+.publication p {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.publication figure {
+    margin: 0;
+    padding: 0;
+}
+
+.publication img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.publication figcaption {
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+}
+
+/* Ensure smooth transitions for the header */
+header {
+    transition: padding 0.5s ease;
+}
+
+/* For content inside .publication */
+.publication h3, .publication p {
+    margin: 0 0 10px 0; /* Ensure no extra margin on top or bottom */
+    padding: 0;
+}
+    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/* Ensure smooth transitions for the header */
+header {
+    transition: padding 0.5s ease;
+}
+
+/* Optional: Style the name link */
+#siteName {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#siteName:hover {
+    text-decoration: underline;
+    color: #ffbf47
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#news {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    font-family: 'Inter', sans-serif;
+}
+#news.active {
+    display: block; /* Show when active */
+}
+.news-year {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 80%; /* Makes the width responsive */
+    max-width: 800px; /* Optional: Limits the width */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.year-title {
+    font-size: 24px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.news-item {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Apply smooth transition to the transform property */
+}
+
+.news-item:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+}
+.news-date {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.news-description {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.6;
+    text-align: center;
+}
+
