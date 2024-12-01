@@ -6,6 +6,7 @@ body {
     box-sizing: border-box; /* Ensure padding and margin don't affect layout */
 }
 
+
 /* Container for the content */
 .global-container {
     width: 90%;
@@ -18,7 +19,7 @@ body {
 header {
     background-image: linear-gradient(to bottom, #042c19, #103724);
     color: #fff;
-    padding: 300px 0; /* Initial height for header */
+    padding: 10vh 0; /* Initial height for header */
     text-align: center;
     position: relative;
     transition: padding 0.5s ease;
@@ -33,7 +34,7 @@ header {
 
 header h1 {
     margin-bottom: 10px; /* Adds space below the title */
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem); /* Responsive scaling */
 }
 
 header p {
@@ -62,7 +63,7 @@ a:hover {
 /* For tablets (max-width: 768px) */
 @media (max-width: 768px) {
     header {
-        padding: 200px 0; /* Adjust header padding for tablets */
+        padding: 7vh 0; /* Adjust header padding for tablets */
     }
 
     header h1 {
@@ -78,7 +79,7 @@ a:hover {
 /* For mobile (max-width: 480px) */
 @media (max-width: 480px) {
     header {
-        padding: 150px 0; /* Adjust header padding for mobile */
+        padding: 5vh 0; /* Adjust header padding for mobile */
     }
 
     header h1 {
@@ -88,13 +89,10 @@ a:hover {
     header p {
         font-size: 1rem; /* Smaller paragraph text */
     }
-}
-
-/* Optional: Mobile Menu */
-@media (max-width: 480px) {
     nav ul {
         display: none; /* Hide navigation links by default */
     }
+}
 
     /* Optionally, add a hamburger button for mobile navigation */
     #mobileMenuButton {
@@ -110,7 +108,7 @@ a:hover {
     nav ul.active {
         display: block;
     }
-}
+
 
 
 /* To justify references */
@@ -181,7 +179,7 @@ nav ul li a:hover {
 .content-section {
     display: none;
     text-align: center; /* Ensures text is centered by default */
-    padding: 20px 20px;
+    padding: 20px 10px;
     background-color: #fff;
     margin: 20px 10px;
     max-height: 80vh; /* Restrict the height of the section */
@@ -204,7 +202,7 @@ nav ul li a:hover {
 
 /* Section Header */
 section h2 {
-    font-size: 30px;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     margin-bottom: 20px;
 }
 
@@ -429,4 +427,5 @@ header {
     line-height: 1.6;
     text-align: center;
 }
+
 
