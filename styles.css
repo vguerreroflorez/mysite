@@ -19,7 +19,7 @@ body {
 header {
     background-image: linear-gradient(to bottom, #042c19, #103724);
     color: #fff;
-    padding: 300xp 0; /* Initial height for header */
+    padding: 300px 0; /* Initial height for header */
     text-align: center;
     position: relative;
     transition: padding 0.5s ease;
@@ -427,5 +427,7 @@ header {
     line-height: 1.6;
     text-align: center;
 }
+
+
 
 
