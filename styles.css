@@ -20,10 +20,10 @@ body {
 header {
     background-image: linear-gradient(to bottom, #042c19, #103724);
     color: #fff;
-    padding: 120px 20px; /* Initial height for header */
+    padding: clamp(60px, 15vh, 140px) 20px;/* Initial height for header */
     text-align: center;
     position: relative;
-    transition: padding 0.5s ease;
+    transition: padding 0.4s ease;
     display: flex;
     flex-direction: column;  /* Stack header items vertically */
     align-items: center;     /* Center the content horizontally */
@@ -35,7 +35,8 @@ header {
 
 header h1 {
     margin-bottom: 10px; /* Adds space below the title */
-    font-size: clamp(2rem, 5vw, 3rem); /* Responsive scaling */
+    font-size: clamp(1.6rem, 4vw, 2.5rem); /* Responsive scaling */
+    margin-bottom: 10px
 }
 
 header p {
@@ -44,7 +45,7 @@ header p {
 
 /* Reduced Header Style for the Transition */
 header.reduced {
-    padding: 20px 0; /* Reduced padding for header */
+    padding: 40px 20px; /* Reduced padding for header */
     transition: padding 0.5s ease; /* Smooth transition for padding change */
 }
 
