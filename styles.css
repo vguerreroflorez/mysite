@@ -3,6 +3,7 @@ body {
     font-family: 'Inter', sans-serif;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
     box-sizing: border-box; /* Ensure padding and margin don't affect layout */
 }
 
@@ -19,7 +20,7 @@ body {
 header {
     background-image: linear-gradient(to bottom, #042c19, #103724);
     color: #fff;
-    padding: 300px 0; /* Initial height for header */
+    padding: 120px 20px; /* Initial height for header */
     text-align: center;
     position: relative;
     transition: padding 0.5s ease;
@@ -271,8 +272,8 @@ section {
     padding: 20px;
     width: 100%;
     max-width: 1200px;
-    min-height: 400vh;
-    overflow-y: auto;
+    min-height: auto;
+    overflow-y: visible;
     background-color: #f9f9f9;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
    
