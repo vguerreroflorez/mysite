@@ -91,7 +91,9 @@ a:hover {
         font-size: 1rem; /* Smaller paragraph text */
     }
     nav ul {
-        display: none; /* Hide navigation links by default */
+        display: flex;/* Hide navigation links by default */
+        flex-direction: column;
+        align-items:center;
     }
 }
 
